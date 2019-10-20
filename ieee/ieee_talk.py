@@ -66,7 +66,7 @@
 # <img src="photo_cumulus.png" width="70%"/>
 
 # %% [markdown] {"trusted": true, "slideshow": {"slide_type": "slide"}}
-# # Our LES
+# # Our LES (Khairoutdinov and Randall, 2003)
 #
 # 1) Surface tracer flux with a 15 minute exponential decay lifetime
 #
