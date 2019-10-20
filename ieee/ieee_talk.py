@@ -63,7 +63,7 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # and for comparison -- the real thing
 #
-# <img src="photo_cumulus.png" height="70%"/>
+# <img src="photo_cumulus.png" height="60%"/>
 
 # %% [markdown] {"trusted": true, "slideshow": {"slide_type": "slide"}}
 # # Our LES
@@ -82,7 +82,7 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Lifetime timeseries for a tracked cloud
 #
-# <img src="long_lifetime_history.png" />
+# <img src="long_lifetime_history.png"  width="70%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Some case studies:
@@ -106,12 +106,29 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Entrainment vs. environmental conditions
 #
-# <img src="entrainment_matrix.png" />
+# <img src="entrainment_matrix.png" width="70%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# # Informing parameterizations
+#
 # <img src="core_median_entrainment.png" />
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# ## Useful interactive visualization
+#
+# ### Map phase space (environmental properties) to cloud fields (brushing?)
+#
+# ### Challenges
+#
+# ####  * Responsive
+#
+# #### * Simple UI
+#
+# #### * Install using conda-forge
+#
+# #### * Commercial - cloud capable
+#
+#
 # ## References
 #
 # [Dawe and Austin, MWR, 2010](https://drive.google.com/open?id=11KEQTJ3-dxWij_oH9aEtbuAzKzEW3c7v)  
@@ -120,3 +137,5 @@
 # [Dawe and Austin, Atmos. Chem. Phys., 2013](https://drive.google.com/open?id=1ObBPF2mM7CeAm0yBiBSw1Ssk6V7q47-G)  
 # [Khairoutdinov and Randall, J. Atmos. Sci., 2003](https://journals.ametsoc.org/doi/full/10.1175/1520-0469%282003%29060%3C0607%3ACRMOTA%3E2.0.CO%3B2)  
 # [Zhang et. al., JAMES, 2013](https://drive.google.com/open?id=1cve5NUoUuF3a-W_9wXGXB87Q_qhllsIG)
+
+# %%

@@ -63,7 +63,7 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # and for comparison -- the real thing
 #
-# <img src="photo_cumulus.png" height="70%"/>
+# <img src="photo_cumulus.png" height="60%"/>
 
 # %% [markdown] {"trusted": true, "slideshow": {"slide_type": "slide"}}
 # # Our LES
@@ -82,7 +82,7 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Lifetime timeseries for a tracked cloud
 #
-# <img src="long_lifetime_history.png" />
+# <img src="long_lifetime_history.png"  width="70%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Some case studies:
@@ -106,7 +106,7 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Entrainment vs. environmental conditions
 #
-# <img src="entrainment_matrix.png" />
+# <img src="entrainment_matrix.png" width="70%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # <img src="core_median_entrainment.png" />
