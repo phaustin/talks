@@ -66,7 +66,7 @@
 # <img src="photo_cumulus.png" width="70%"/>
 
 # %% [markdown] {"trusted": true, "slideshow": {"slide_type": "slide"}}
-# # Our LES
+# # Our LES (Khairoutdinov and Randall, 2003)
 #
 # 1) Surface tracer flux with a 15 minute exponential decay lifetime
 #
@@ -87,11 +87,11 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Some case studies:
 #
-# 1) [Daytime boundary layer over land](https://drive.google.com/file/d/1Qwioo3qSyEzr4tTuC3Sx54oXLKg-3g3D/view?usp=sharing)
+# 1) [Daytime boundary layer over land (Dawe and Austin)](https://drive.google.com/file/d/1Qwioo3qSyEzr4tTuC3Sx54oXLKg-3g3D/view?usp=sharing)
 #
-# 2) [Precipitating trade cumulus](https://drive.google.com/open?id=14ZLSAHCrjv8U0IKD9sQMHdql33Ebxkp3)
+# 2) [Precipitating trade cumulus (Popa and Austin)](https://drive.google.com/open?id=14ZLSAHCrjv8U0IKD9sQMHdql33Ebxkp3)
 #
-# 3) Tropical convection: 86 km x 86 km x 25 km with 50 meter resolution  
+# 3) Tropical convection (Loh and Austin): 86 km x 86 km x 25 km with 50 meter resolution  
 #
 # <img src="loren_gate.png" />
 
