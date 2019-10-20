@@ -113,27 +113,29 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Informing parameterizations with the mean field statistics
 #
-# <img src="core_median_entrainment.png" />
+# <img src="core_median_entrainment.png" width="70%" />
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
-# ## How could interactive visualization help us?
+# # How could interactive visualization help us?
 #
-# ### Map phase space (environmental properties) to cloud fields (brushing?)
+# ## Map phase space (environmental properties) to cloud fields (brushing?)
 #
-# ### Callbacks to compute local statistics
+# ## Callbacks to compute local statistics
 #
-# ### Challenges
+# ## Challenges/features
 #
-# ####  * Responsive
+# ###  * Responsive
 #
-# #### * Simple UI
+# ### *  python api
 #
-# #### * Install using conda-forge
+# ### * Simple UI/hackable
 #
-# #### * Commercial - cloud capable
+# ### * Install using conda-forge
 #
-#
-# ## References
+# ### * Commercial-cloud capable
+
+# %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# # References
 #
 # [Dawe and Austin, MWR, 2010](https://drive.google.com/open?id=11KEQTJ3-dxWij_oH9aEtbuAzKzEW3c7v)  
 # [Dawe and Austin, J. Atmos. Sci., 2011](https://drive.google.com/open?id=1KSa68c-D65t8y1Dv4eUMz7WE8NA73yLQ)  
