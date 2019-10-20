@@ -63,7 +63,7 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # and for comparison -- the real thing
 #
-# <img src="photo_cumulus.png" height="60%"/>
+# <img src="photo_cumulus.png" width="70%"/>
 
 # %% [markdown] {"trusted": true, "slideshow": {"slide_type": "slide"}}
 # # Our LES
@@ -101,6 +101,8 @@
 # <img src="single_column.png" width="50%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# # Two different behaviors for convective mixing feedback
+#
 # <img src="zhang_cartoon.png" width="50%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
@@ -109,7 +111,7 @@
 # <img src="entrainment_matrix.png" width="70%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
-# # Informing parameterizations
+# # Informing parameterizations with the mean field statistics
 #
 # <img src="core_median_entrainment.png" />
 
