@@ -114,9 +114,11 @@
 # <img src="core_median_entrainment.png" />
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
-# ## Useful interactive visualization
+# ## How could interactive visualization help us?
 #
 # ### Map phase space (environmental properties) to cloud fields (brushing?)
+#
+# ### Callbacks to compute local statistics
 #
 # ### Challenges
 #
@@ -137,5 +139,3 @@
 # [Dawe and Austin, Atmos. Chem. Phys., 2013](https://drive.google.com/open?id=1ObBPF2mM7CeAm0yBiBSw1Ssk6V7q47-G)  
 # [Khairoutdinov and Randall, J. Atmos. Sci., 2003](https://journals.ametsoc.org/doi/full/10.1175/1520-0469%282003%29060%3C0607%3ACRMOTA%3E2.0.CO%3B2)  
 # [Zhang et. al., JAMES, 2013](https://drive.google.com/open?id=1cve5NUoUuF3a-W_9wXGXB87Q_qhllsIG)
-
-# %%

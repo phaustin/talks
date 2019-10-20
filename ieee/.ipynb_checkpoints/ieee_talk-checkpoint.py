@@ -109,9 +109,28 @@
 # <img src="entrainment_matrix.png" width="70%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# # Informing parameterizations
+#
 # <img src="core_median_entrainment.png" />
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# ## How could interactive visualization help us?
+#
+# ### Map phase space (environmental properties) to cloud fields (brushing?)
+#
+# ### Callbacks to compute local statistics
+#
+# ### Challenges
+#
+# ####  * Responsive
+#
+# #### * Simple UI
+#
+# #### * Install using conda-forge
+#
+# #### * Commercial - cloud capable
+#
+#
 # ## References
 #
 # [Dawe and Austin, MWR, 2010](https://drive.google.com/open?id=11KEQTJ3-dxWij_oH9aEtbuAzKzEW3c7v)  
