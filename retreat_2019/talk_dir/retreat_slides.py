@@ -183,7 +183,7 @@ import antigravity
 # * [Data science 100](https://ubc-dsci.github.io/introduction-to-datascience/)
 #   - [github source for textbook](https://github.com/UBC-DSCI/introduction-to-datascience)
 #   - [notebooks and assignments](https://github.com/UBC-DSCI/dsci-100/tree/master/materials)
-# * [this slide deck](
+# * [this slide deck](https://github.com/phaustin/talks/blob/master/retreat_2019/talk_dir/retreat_slides.py)
 #   
 #   
 
