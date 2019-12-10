@@ -28,7 +28,8 @@
 #
 # Philip Austin
 #
-# Notebook available at https://github.com/phaustin/retreat_2019
+# Notebook available at [github: source](https://github.com/phaustin/talks/tree/master/retreat_2019)
+# and [github: rendered](https://phaustin.github.io/talks/retreat_2019/retreat_slides.slides.html)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## Introduction
