@@ -63,10 +63,10 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # and for comparison -- the real thing
 #
-# <img src="photo_cumulus.png" height="70%"/>
+# <img src="photo_cumulus.png" width="70%"/>
 
 # %% [markdown] {"trusted": true, "slideshow": {"slide_type": "slide"}}
-# # Our LES
+# # Our LES (Khairoutdinov and Randall, 2003)
 #
 # 1) Surface tracer flux with a 15 minute exponential decay lifetime
 #
@@ -82,16 +82,16 @@
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Lifetime timeseries for a tracked cloud
 #
-# <img src="long_lifetime_history.png" />
+# <img src="long_lifetime_history.png"  width="70%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Some case studies:
 #
-# 1) [Daytime boundary layer over land](https://drive.google.com/file/d/1Qwioo3qSyEzr4tTuC3Sx54oXLKg-3g3D/view?usp=sharing)
+# 1) [Daytime boundary layer over land (Dawe and Austin)](https://drive.google.com/file/d/1Qwioo3qSyEzr4tTuC3Sx54oXLKg-3g3D/view?usp=sharing)
 #
-# 2) [Precipitating trade cumulus](https://drive.google.com/open?id=14ZLSAHCrjv8U0IKD9sQMHdql33Ebxkp3)
+# 2) [Precipitating trade cumulus (Popa and Austin)](https://drive.google.com/open?id=14ZLSAHCrjv8U0IKD9sQMHdql33Ebxkp3)
 #
-# 3) Tropical convection: 86 km x 86 km x 25 km with 50 meter resolution  
+# 3) Tropical convection (Loh and Austin): 86 km x 86 km x 25 km with 50 meter resolution  
 #
 # <img src="loren_gate.png" />
 
@@ -101,18 +101,41 @@
 # <img src="single_column.png" width="50%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# # Two different behaviors for convective mixing feedback
+#
 # <img src="zhang_cartoon.png" width="50%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
 # # Entrainment vs. environmental conditions
 #
-# <img src="entrainment_matrix.png" />
+# <img src="entrainment_matrix.png" width="70%"/>
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
-# <img src="core_median_entrainment.png" />
+# # Informing parameterizations with the mean field statistics
+#
+# <img src="core_median_entrainment.png" width="70%" />
 
 # %% [markdown] {"slideshow": {"slide_type": "slide"}}
-# ## References
+# # How could interactive visualization help us?
+#
+# ## Map phase space (environmental properties) to cloud fields (brushing?)
+#
+# ## Callbacks to compute local statistics
+#
+# ## Challenges/features
+#
+# ###  * Responsive
+#
+# ### *  python api
+#
+# ### * Simple UI/hackable
+#
+# ### * Install using conda-forge
+#
+# ### * Commercial-cloud capable
+
+# %% [markdown] {"slideshow": {"slide_type": "slide"}}
+# # References
 #
 # [Dawe and Austin, MWR, 2010](https://drive.google.com/open?id=11KEQTJ3-dxWij_oH9aEtbuAzKzEW3c7v)  
 # [Dawe and Austin, J. Atmos. Sci., 2011](https://drive.google.com/open?id=1KSa68c-D65t8y1Dv4eUMz7WE8NA73yLQ)  
