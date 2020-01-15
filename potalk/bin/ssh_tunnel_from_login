@@ -1,0 +1,34 @@
+#!/bin/sh
+
+function finish {
+  #echo Cleanup on login
+  kill -KILL $KILLPID
+}
+
+#set -x
+set -u
+
+if [[ $# -ne 3 ]]; then
+    echo
+    echo "Syntax: ssh_tunnel_from_login compute_node remote_login remote_port"
+    echo "        (Note: compute_node must be reserved first by torque"
+    echo "               end job must be in running state)"
+    echo
+    echo "Example: ssh_tunnel_from_login n056 jdoe@myworkstation 9001"
+    echo
+    echo "Connect from on remote: ssh -p remote_port cluster_user_id@localhost "
+    echo
+    exit 1
+fi
+
+node="$1"
+remote="$2"
+port="$3"
+
+echo On remote run: ssh -p $port cluster_user_id@localhost
+
+ssh -N -R ${port}:${node}:22 "$remote" &
+KILLPID=$!
+trap finish EXIT
+
+wait

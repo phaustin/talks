@@ -1,0 +1,4 @@
+.ipyng-checkpoints
+dask-worker-space
+*.ipynb
+.ipynb_checkpoints
