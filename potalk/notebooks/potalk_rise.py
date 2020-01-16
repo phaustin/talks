@@ -459,7 +459,7 @@ plt.ylabel('y');
 #  
 #   - Great read by the Richard McElreath, director of the Max Planck Institute for Evolutionary Anthropology -- well written and very accessible -- nice treatment on the connection between statistics and information theory
 #   
-#   - [SR Python source code](https://github.com/pymc-devs/resources/tree/master/Rethinking)
+#   - [SR and other python source code for stats texts](https://github.com/pymc-devs/resources)
 #
 # * [Statistics, data mining and machine learning in astronomy](https://www.degruyter.com/viewbooktoc/product/459330)
 #
