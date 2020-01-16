@@ -1,48 +1,20 @@
 # Installation
 
-## install miniconda
+1.. install miniconda from https://docs.conda.io/en/latest/miniconda.html
 
-1. wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-2. Run the installer
+2.  start a fresh shell
 
-    bash Miniconda3*
+3. `conda install git`
 
-    (accept all defaults, and agree to let installer append activation lines to your .bashrc)
+3. `git clone https://github.com/phaustin/talks.git`
 
-2b. start a fresh bash shell
+4. `cd talks/notebooks`
 
-3. Make conda-forge the default channel
+5. `conda env create -f environment.yml`
 
-   conda config --prepend channels conda-forge
+6. `conda activate potalk`
 
-4. Update conda
-
-   conda update -n base conda
-
-5. Install git
-
-   conda install git
-
-5. Update everything else
-
-   conda update --all
-
-6. clone this repo
-
-   git clone https://github.com/phaustin/jdtalk.git
-
-7. create and activate the environment
-   ```
-     cd jdtalk/notebooks/python
-     conda env create -f environment.yml
-     conda activate dask
-   ```
-8. Run the script
-
-   python big_data.py
-
-### this should block while it does work on six workers, with status graphs on port 8787
-
+6. Start jupyter and launch potalk_rise.ipynb
 
 
 
