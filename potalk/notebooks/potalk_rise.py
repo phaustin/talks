@@ -10,7 +10,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.3.2
+#       jupytext_version: 1.5.0
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -24,6 +24,9 @@
 # ## Phil Austin, Earth, Ocean and Atmospheric Sciences, UBC
 #
 # ###  Use the spacebar on your keyboard to advance through all the slides in this talk.  The escape key shows thumbnails, type ? for other options.
+
+# %%
+# #!mamba install pymc3 -y
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 # ## In the beginning, there was ANOVA  ([Austin et al., 1985](https://www.dropbox.com/s/nrzbf4x4cnasg35/austin_85_variability.pdf?dl=0) )
