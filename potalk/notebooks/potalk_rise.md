@@ -2,21 +2,20 @@
 jupytext:
   cell_metadata_filter: all
   encoding: '# -*- coding: utf-8 -*-'
-  formats: ipynb,py:percent
+  formats: ipynb,md:myst
   notebook_metadata_filter: all,-language_info,-toc,-latex_envs
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.0
+    jupytext_version: 1.13.8
 kernelspec:
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
 +++ {"slideshow": {"slide_type": "slide"}}
-
 
 # What I wish I'd known about statistics
 
@@ -25,6 +24,8 @@ kernelspec:
 ###  Use the spacebar on your keyboard to advance through all the slides in this talk.  The escape key shows thumbnails, type ? for other options.
 
 ```{code-cell} ipython3
+:trusted: true
+
 #!mamba install pymc3 -y
 ```
 
@@ -34,15 +35,11 @@ kernelspec:
 
 <img src="images/jas_1985.png" width="50%">
 
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 ## I had some issues writing the appendix
 
 <img src="images/snipped_anova_jas.png" width="50%">
-
-
-
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -76,7 +73,7 @@ i)  0 ≤ p(E) ≤ 1.
 
 ii) the certain event has probability 1  
 
-iii) The probability of the union of mutually exclusive events is the sum of the probabilities of the individual events.    
+iii) The probability of the union of mutually exclusive events is the sum of the probabilities of the individual events.
 
 +++ {"slideshow": {"slide_type": "slide"}}
 
@@ -107,7 +104,6 @@ All of these interpretations are consistent with these axioms:
 
 If you tossed a coin 100 times resulting in 60 heads, would you rather know the probability of getting > 59 heads out of 100 tosses if the coin happened to be fair, or the probability it is fair given exactly 60 heads? The frequentist approach is alluring because of the minimal work in carrying out a test of the null hypothesis θ=½. But the Bayesian approach provides a direct answer to the second question, and requires you to think. What is an “unfair” coin? Is it θ outside of [0.49, 0.51]? What is the world view of coins, e.g., is someone likely to provide a coin that is easily detectable as unfair because its θ=0.6? Was the coin chosen at random or handed to us?
 
-
 +++ {"slideshow": {"slide_type": "slide"}}
 
 and for the [correlation coefficient](https://baezortega.github.io/2018/05/28/robust-correlation/) the statements would be something like:
@@ -129,7 +125,6 @@ Probabilities can be interpreted in two ways:
 (i) Relative frequency interpretation.
 
 (ii) Subjective interpretation.
-
 
 +++ {"slideshow": {"slide_type": "subslide"}}
 
@@ -213,6 +208,7 @@ A couple of lines of python
 ---
 slideshow:
   slide_type: subslide
+trusted: true
 ---
 import numpy as np
 from matplotlib import pyplot as plt
@@ -251,6 +247,7 @@ def find_line(xs, ys):
 ---
 slideshow:
   slide_type: subslide
+trusted: true
 ---
 size = 200
 true_intercept = 1
@@ -274,6 +271,7 @@ data = dict(x=x, y=y);
 ---
 slideshow:
   slide_type: subslide
+trusted: true
 ---
 fig = plt.figure(figsize=(7, 7))
 ax = fig.add_subplot(111, xlabel='x', ylabel='y', title='Generated data and underlying model')
@@ -290,6 +288,7 @@ plt.legend(loc=0);
 ---
 slideshow:
   slide_type: subslide
+trusted: true
 ---
 slope, intercept = find_line(x,y)
 fit_y = intercept + slope * x
@@ -305,6 +304,7 @@ display(fig)
 ---
 slideshow:
   slide_type: subslide
+trusted: true
 ---
 def draw_bs_pairs_linreg(x, y, size=1):
     """Perform pairs bootstrap for linear regression."""
@@ -336,6 +336,7 @@ def draw_bs_pairs_linreg(x, y, size=1):
 ---
 slideshow:
   slide_type: subslide
+trusted: true
 ---
 slopes, intercepts = draw_bs_pairs_linreg(x, y, size=100)
 for the_slope,the_intercept in zip(slopes,intercepts):
@@ -352,6 +353,7 @@ display(fig)
 ---
 slideshow:
   slide_type: subslide
+trusted: true
 ---
 fig, ax = plt.subplots(1,2,figsize=(12,6))
 ax[0].hist(slopes); ax[0].set_title("slopes");
@@ -435,6 +437,7 @@ A (very) fancy version of naive Monte Carlo integration:
 ---
 slideshow:
   slide_type: slide
+trusted: true
 ---
 import pymc3 as pm
 with pm.Model() as model: # model specifications in PyMC3 are wrapped in a with-statement
@@ -455,6 +458,7 @@ with pm.Model() as model: # model specifications in PyMC3 are wrapped in a with-
 ---
 slideshow:
   slide_type: slide
+trusted: true
 ---
 axes=pm.traceplot(trace[100:],figsize=(12, 7));
 ```
@@ -463,6 +467,7 @@ axes=pm.traceplot(trace[100:],figsize=(12, 7));
 ---
 slideshow:
   slide_type: slide
+trusted: true
 ---
 plt.figure(figsize=(7, 7))
 plt.plot(x, y, 'rx', label='data')
@@ -562,5 +567,7 @@ Advantages:
 * [David Hogg's blog](http://hoggresearch.blogspot.com/) -- [a representative post](http://hoggresearch.blogspot.com/2019/09/how-to-model-empirical-abundance-space.html)
 
 ```{code-cell} ipython3
+:trusted: true
+
 
 ```
