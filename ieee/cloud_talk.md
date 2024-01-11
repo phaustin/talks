@@ -23,7 +23,7 @@ kernelspec:
 * Yellow: liquid water, non-core
 * Grey: upward moving dry air (sub-cloud plumes)
 
-```{image} ./classified_clouds.png
+```{image} ./images/classified_clouds.png
 :width: 60%
 :align: center
 ```
@@ -33,7 +33,7 @@ kernelspec:
 # Importance for climate
 ## Small and large clouds are nonlinearly coupled via the Hadley circulation
 
-```{image} ./hadley_cell.png
+```{image} ./images/hadley_cell.png
 :width: 50%
 :align: center
 ```
@@ -42,7 +42,7 @@ kernelspec:
 
 # and for comparison -- the real thing
 
-```{image} ./photo_cumulus.png
+```{image} ./images/photo_cumulus.png
 :align: center
 :width: 40%
 ```
@@ -55,7 +55,7 @@ kernelspec:
 
 2) Explicit calculation of mass exchange between cloud and environment
 
-```{image} ./classified_clouds.png
+```{image} ./images/classified_clouds.png
 :align: center
 :width: 60%
 ```
@@ -66,7 +66,7 @@ kernelspec:
 
 * Comparison of two calculation methods (tetrahedral vs. Romps)
 
-```{image} ./romps_vs_dawe_snapshot.png
+```{image} ./images/romps_vs_dawe_snapshot.png
 :align: center
 :width: 40%
 ```
@@ -76,7 +76,7 @@ kernelspec:
 # How long do boundary layer clouds live?
 
 
-```{image} ./long_lifetime_history.png
+```{image} ./images/long_lifetime_history.png
 :align: center
 :width: 40%
 ```
@@ -91,7 +91,7 @@ kernelspec:
 
 3) Tropical convection (Loh and Austin): 86 km x 86 km x 25 km with 50 meter resolution  
 
-```{image} ./loren_gate.png
+```{image} ./images/loren_gate.png
 :align: center
 :width: 70%
 ```
@@ -106,7 +106,7 @@ kernelspec:
 
 * Half of the models get hotter (amplifying feedback), and half get cooler (stabilizing feedback)
 
-```{image} ./single_column.png
+```{image} ./images/single_column.png
 :align: center
 :width: 30%
 ```
@@ -117,7 +117,7 @@ kernelspec:
 
 * It's a fight between drying out (due to mixing of dry air from above) and getting moister (due to increased surface vapor flux from the warmer ocean)
 
-```{image} ./zhang_cartoon.png
+```{image} ./images/zhang_cartoon.png
 :align: center
 :width: 40%
 ```
@@ -128,7 +128,7 @@ kernelspec:
 
 * A lot of variability, but some trends in the "entrainment rate" $\epsilon$
 
-```{image} ./core_median_entrainment.png
+```{image} ./images/core_median_entrainment.png
 :align: center
 :width: 50%
 ```
