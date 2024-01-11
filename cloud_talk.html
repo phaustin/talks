@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Cloud-capped boundary layer – models and observations &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cloud_talk';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Cloud-capped boundary layer – models and observations
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/cloud_talk.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div></div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Cloud-capped boundary layer – models and observations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Cloud-capped boundary layer – models and observations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-computer-simulation-of-active-and-decaying-clouds">A computer simulation of active and decaying clouds</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-for-climate">Importance for climate</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-and-large-clouds-are-nonlinearly-coupled-via-the-hadley-circulation">Small and large clouds are nonlinearly coupled via the Hadley circulation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#and-for-comparison-the-real-thing">and for comparison – the real thing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-system-for-atmospheric-modelling-large-eddy-simulation-khairoutdinov-and-randall-2003">The System for Atmospheric Modelling Large Eddy Simulation (Khairoutdinov and Randall, 2003)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#where-does-environmental-air-enter-a-cloud">Where does environmental air enter a cloud?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-long-do-boundary-layer-clouds-live">How long do boundary layer clouds live?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-case-studies">Some case studies:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cloud-parameterizations-in-global-climate-models-don-t-aggree">Cloud parameterizations in global climate models don’t aggree</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-going-on-inside-the-models">What is going on inside the models?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-cloud-mising-depend-on-the-large-scale-environemnt">How does cloud mising depend on the large scale environemnt</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#other-model-and-observational-data">Other model and observational data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cabauw-tower-netherlands">Cabauw tower, Netherlands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-radiation-monitoring-program-southern-great-plains">Atmospheric Radiation Monitoring Program, Southern Great Plains</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-radiation-monitoring-program-alaska-north-slope">Atmospheric Radiation Monitoring Program, Alaska North Slope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-radiation-monitoring-program-azores">Atmospheric Radiation Monitoring Program, Azores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ncar-field-campaigns">NCAR field campaigns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-layer-data-from-cmip6">Boundary layer data from CMIP6</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cloud-capped-boundary-layer-models-and-observations">
+<h1>Cloud-capped boundary layer – models and observations<a class="headerlink" href="#cloud-capped-boundary-layer-models-and-observations" title="Permalink to this heading">#</a></h1>
+<section id="a-computer-simulation-of-active-and-decaying-clouds">
+<h2>A computer simulation of active and decaying clouds<a class="headerlink" href="#a-computer-simulation-of-active-and-decaying-clouds" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Red: positively bouyant, moving upward, containing liquid water (“cloud core”)</p></li>
+<li><p>Yellow: liquid water, non-core</p></li>
+<li><p>Grey: upward moving dry air (sub-cloud plumes)</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/classified_clouds.png"><img alt="_images/classified_clouds.png" class="align-center" src="_images/classified_clouds.png" style="width: 60%;" /></a>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="importance-for-climate">
+<h1>Importance for climate<a class="headerlink" href="#importance-for-climate" title="Permalink to this heading">#</a></h1>
+<section id="small-and-large-clouds-are-nonlinearly-coupled-via-the-hadley-circulation">
+<h2>Small and large clouds are nonlinearly coupled via the Hadley circulation<a class="headerlink" href="#small-and-large-clouds-are-nonlinearly-coupled-via-the-hadley-circulation" title="Permalink to this heading">#</a></h2>
+<a class="reference internal image-reference" href="_images/hadley_cell.png"><img alt="_images/hadley_cell.png" class="align-center" src="_images/hadley_cell.png" style="width: 50%;" /></a>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="and-for-comparison-the-real-thing">
+<h1>and for comparison – the real thing<a class="headerlink" href="#and-for-comparison-the-real-thing" title="Permalink to this heading">#</a></h1>
+<a class="reference internal image-reference" href="_images/photo_cumulus.png"><img alt="_images/photo_cumulus.png" class="align-center" src="_images/photo_cumulus.png" style="width: 40%;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-system-for-atmospheric-modelling-large-eddy-simulation-khairoutdinov-and-randall-2003">
+<h1>The System for Atmospheric Modelling Large Eddy Simulation (Khairoutdinov and Randall, 2003)<a class="headerlink" href="#the-system-for-atmospheric-modelling-large-eddy-simulation-khairoutdinov-and-randall-2003" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Surface tracer flux with a 15 minute exponential decay lifetime</p></li>
+<li><p>Explicit calculation of mass exchange between cloud and environment</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/classified_clouds.png"><img alt="_images/classified_clouds.png" class="align-center" src="_images/classified_clouds.png" style="width: 60%;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="where-does-environmental-air-enter-a-cloud">
+<h1>Where does environmental air enter a cloud?<a class="headerlink" href="#where-does-environmental-air-enter-a-cloud" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Comparison of two calculation methods (tetrahedral vs. Romps)</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/romps_vs_dawe_snapshot.png"><img alt="_images/romps_vs_dawe_snapshot.png" class="align-center" src="_images/romps_vs_dawe_snapshot.png" style="width: 40%;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="how-long-do-boundary-layer-clouds-live">
+<h1>How long do boundary layer clouds live?<a class="headerlink" href="#how-long-do-boundary-layer-clouds-live" title="Permalink to this heading">#</a></h1>
+<a class="reference internal image-reference" href="_images/long_lifetime_history.png"><img alt="_images/long_lifetime_history.png" class="align-center" src="_images/long_lifetime_history.png" style="width: 40%;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="some-case-studies">
+<h1>Some case studies:<a class="headerlink" href="#some-case-studies" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>VIDEO: <a class="reference external" href="https://drive.google.com/file/d/1Qwioo3qSyEzr4tTuC3Sx54oXLKg-3g3D/view?usp=sharing">Daytime boundary layer over land (Dawe and Austin)</a></p></li>
+<li><p>VIDEO: <a class="reference external" href="https://drive.google.com/open?id=14ZLSAHCrjv8U0IKD9sQMHdql33Ebxkp3">Precipitating trade cumulus (Popa and Austin)</a></p></li>
+<li><p>Tropical convection (Loh and Austin): 86 km x 86 km x 25 km with 50 meter resolution</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/loren_gate.png"><img alt="_images/loren_gate.png" class="align-center" src="_images/loren_gate.png" style="width: 70%;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cloud-parameterizations-in-global-climate-models-don-t-aggree">
+<h1>Cloud parameterizations in global climate models don’t aggree<a class="headerlink" href="#cloud-parameterizations-in-global-climate-models-don-t-aggree" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Tests of single column versions of climate models</p></li>
+<li><p>Warm the ocean by 2 degrees – do clouds increase the heating by disappearing or decrease it by covering more of the ocean?  This is “cloud feedback”</p></li>
+<li><p>Half of the models get hotter (amplifying feedback), and half get cooler (stabilizing feedback)</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/single_column.png"><img alt="_images/single_column.png" class="align-center" src="_images/single_column.png" style="width: 30%;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="what-is-going-on-inside-the-models">
+<h1>What is going on inside the models?<a class="headerlink" href="#what-is-going-on-inside-the-models" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>It’s a fight between drying out (due to mixing of dry air from above) and getting moister (due to increased surface vapor flux from the warmer ocean)</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/zhang_cartoon.png"><img alt="_images/zhang_cartoon.png" class="align-center" src="_images/zhang_cartoon.png" style="width: 40%;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="how-does-cloud-mising-depend-on-the-large-scale-environemnt">
+<h1>How does cloud mising depend on the large scale environemnt<a class="headerlink" href="#how-does-cloud-mising-depend-on-the-large-scale-environemnt" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>A lot of variability, but some trends in the “entrainment rate” <span class="math notranslate nohighlight">\(\epsilon\)</span></p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/core_median_entrainment.png"><img alt="_images/core_median_entrainment.png" class="align-center" src="_images/core_median_entrainment.png" style="width: 50%;" /></a>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="other-model-and-observational-data">
+<h1>Other model and observational data<a class="headerlink" href="#other-model-and-observational-data" title="Permalink to this heading">#</a></h1>
+<section id="cabauw-tower-netherlands">
+<h2><a class="reference external" href="https://ruisdael-observatory.nl/cabauw/">Cabauw tower, Netherlands</a><a class="headerlink" href="#cabauw-tower-netherlands" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="atmospheric-radiation-monitoring-program-southern-great-plains">
+<h2><a class="reference external" href="https://www.arm.gov/capabilities/observatories/sgp">Atmospheric Radiation Monitoring Program, Southern Great Plains</a><a class="headerlink" href="#atmospheric-radiation-monitoring-program-southern-great-plains" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="atmospheric-radiation-monitoring-program-alaska-north-slope">
+<h2><a class="reference external" href="https://www.arm.gov/capabilities/observatories/nsa">Atmospheric Radiation Monitoring Program, Alaska North Slope</a><a class="headerlink" href="#atmospheric-radiation-monitoring-program-alaska-north-slope" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="atmospheric-radiation-monitoring-program-azores">
+<h2><a class="reference external" href="https://www.arm.gov/capabilities/observatories/ena">Atmospheric Radiation Monitoring Program, Azores</a><a class="headerlink" href="#atmospheric-radiation-monitoring-program-azores" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="ncar-field-campaigns">
+<h2><a class="reference external" href="https://www.eol.ucar.edu/all-field-programs">NCAR field campaigns</a><a class="headerlink" href="#ncar-field-campaigns" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="boundary-layer-data-from-cmip6">
+<h2><a class="reference external" href="https://projectpythia.org/cmip6-cookbook/README.html">Boundary layer data from CMIP6</a><a class="headerlink" href="#boundary-layer-data-from-cmip6" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="https://drive.google.com/open?id=11KEQTJ3-dxWij_oH9aEtbuAzKzEW3c7v">Dawe and Austin, MWR, 2010</a><br />
+<a class="reference external" href="https://drive.google.com/open?id=1KSa68c-D65t8y1Dv4eUMz7WE8NA73yLQ">Dawe and Austin, J. Atmos. Sci., 2011</a><br />
+<a class="reference external" href="https://drive.google.com/open?id=154N79FKXN-Km4e4Tt5gv19XdyU7FKnAD">Dawe and Austin, Atmos. Chem. Phys., 2012</a><br />
+<a class="reference external" href="https://drive.google.com/open?id=1ObBPF2mM7CeAm0yBiBSw1Ssk6V7q47-G">Dawe and Austin, Atmos. Chem. Phys., 2013</a><br />
+<a class="reference external" href="https://journals.ametsoc.org/doi/full/10.1175/1520-0469%282003%29060%3C0607%3ACRMOTA%3E2.0.CO%3B2">Khairoutdinov and Randall, J. Atmos. Sci., 2003</a><br />
+<a class="reference external" href="https://drive.google.com/open?id=1cve5NUoUuF3a-W_9wXGXB87Q_qhllsIG">Zhang et. al., JAMES, 2013</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Cloud-capped boundary layer – models and observations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-computer-simulation-of-active-and-decaying-clouds">A computer simulation of active and decaying clouds</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-for-climate">Importance for climate</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-and-large-clouds-are-nonlinearly-coupled-via-the-hadley-circulation">Small and large clouds are nonlinearly coupled via the Hadley circulation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#and-for-comparison-the-real-thing">and for comparison – the real thing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-system-for-atmospheric-modelling-large-eddy-simulation-khairoutdinov-and-randall-2003">The System for Atmospheric Modelling Large Eddy Simulation (Khairoutdinov and Randall, 2003)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#where-does-environmental-air-enter-a-cloud">Where does environmental air enter a cloud?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-long-do-boundary-layer-clouds-live">How long do boundary layer clouds live?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-case-studies">Some case studies:</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cloud-parameterizations-in-global-climate-models-don-t-aggree">Cloud parameterizations in global climate models don’t aggree</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-going-on-inside-the-models">What is going on inside the models?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-cloud-mising-depend-on-the-large-scale-environemnt">How does cloud mising depend on the large scale environemnt</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#other-model-and-observational-data">Other model and observational data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cabauw-tower-netherlands">Cabauw tower, Netherlands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-radiation-monitoring-program-southern-great-plains">Atmospheric Radiation Monitoring Program, Southern Great Plains</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-radiation-monitoring-program-alaska-north-slope">Atmospheric Radiation Monitoring Program, Alaska North Slope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-radiation-monitoring-program-azores">Atmospheric Radiation Monitoring Program, Azores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ncar-field-campaigns">NCAR field campaigns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-layer-data-from-cmip6">Boundary layer data from CMIP6</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
